@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <title>Register information at Blockchain</title>
+
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="./node_modules/web3/dist/web3.min.js"></script>
+    <script src="./index.js"></script>    
+  </head>
+
+  <body class="container">
+    <div>
+        <h1>Public Information</h1>
+        <button id="btn_getBalance" onclick="get_balance()">Balance</button>
+        <div id="display">Balance of contract(wei): </div>
+
+        <button id="btn_stt_contract" onclick="get_stt_contract()">Status contract</button>
+        <div id="stt_contract">Current status contract: </div>
+
+        <button id="btn_stt_order" onclick="get_stt_order()">Status order</button>
+        <div id="stt_order">Current status contract: </div>
+    </div>
+
+    <div id="contain_buyer">
+        <h1>Buyer</h1>
+        <input type="text" id="txt_Money">
+        <button onclick="confirm_purchase()">Purchase</button>
+        <button onclick="cancel()">Cancelation</button>
+    </div>
+
+    <div id="contain_seller" style="display: none;">
+      <h1>Seller</h1>
+      <input type="text" id="txt_AccShip">
+      <button onclick="shipper_register()">Register</button>
+      <button onclick="pay_seller()">Withdraw</button>
+      <button onclick="solve_bomhang()">Bom hang</button>
+      <button onclick="seller_abort()">Abort</button>
+    </div>
+
+
+    <div id="contain_shipper" style="display: none;">
+        <h1>Shipper</h1>
+        <button onclick="received()">Confirm received order</button>
+        <button onclick="confirm_bomhang()">Confirm Bom Hang</button>
+    </div>
+  </body>
+</html>
